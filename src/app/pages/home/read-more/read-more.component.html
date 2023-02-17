@@ -1,0 +1,4 @@
+<div>
+  {{(readMore) ? longText : longText | slice:0:100}} <span *ngIf="!readMore">...</span>
+  <a href="javascript:;" *ngIf="!readMore" (click)="readMore=true">[Read More]</a>
+</div>

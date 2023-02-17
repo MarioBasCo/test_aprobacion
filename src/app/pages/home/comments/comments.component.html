@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comments</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let item of listComments">
+    <ion-card-header>
+      <ion-item-divider color="transparent">
+        <ion-avatar>
+          <img src="https://cdn-icons-png.flaticon.com/512/9706/9706650.png">
+        </ion-avatar>
+        <ion-label class="ion-margin-start" color="secondary">{{item?.user}}</ion-label>
+      </ion-item-divider>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-text>{{item.detail}}</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <div>
+    <form #formulario="ngForm" (ngSubmit)="saveComment()">
+      <ion-list lines="none">
+        <ion-item class="ion-margin-top" lines="none" color="transparent">
+          <ion-textarea type="text" name="comentario" [(ngModel)]="comentario" id="myInput"
+            required></ion-textarea>
+        </ion-item>
+
+        <div class="right">
+          <ion-item lines="none" color="transparent">
+            <ion-button type="submit" fill="clear" color="secondary" [disabled]="formulario.invalid">
+              <ion-icon size="large" slot="start" name="chatbox-ellipses-outline"></ion-icon>
+              <ion-label>Save</ion-label>
+            </ion-button>
+          </ion-item>
+        </div>
+      </ion-list>
+    </form>
+  </div>
+</ion-footer>

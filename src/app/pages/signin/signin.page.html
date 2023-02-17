@@ -1,0 +1,34 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>signin</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="ion-padding container">
+    <ion-text class="ion-text-center" color="danger">
+      <h2>Iniciar Sesión</h2>
+    </ion-text>
+
+    <form [formGroup]="formLogin" (ngSubmit)="login()">
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-row class="ion-margin-vertical">
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+
+    <div class="ion-text-center">
+      <span>¿Aún no tienes cuenta?, <a routerLink="/signup">Registrate</a></span>
+    </div>
+  </div>
+
+</ion-content>

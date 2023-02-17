@@ -1,0 +1,38 @@
+ion-grid {
+    height: 100%;
+
+}
+
+ion-col {
+    height: 100%;
+
+    }
+
+.my-swiper {
+    height: 100%;
+    --swiper-pagination-color: #FFF;
+}
+
+.swiper-slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #1F0E76;
+  height: 100%;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.swiper-slide-container-2 {
+    background: #A653F1;
+}
+
+.swiper-slide-container-3 {
+    background: #00A7FF;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #000 !important;
+}

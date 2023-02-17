@@ -1,0 +1,59 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-padding">
+  <swiper [pagination]="true" class="my-swiper" effect="cube">
+    <ng-template swiperSlide>
+      <div class="swiper-slide-container">
+        <div>
+          <img src="assets/kiibo.jpg" alt="logo">
+          <ion-text color="light">
+            <h1>Bienvenido</h1>
+            <p class="ion-padding">La siguiente app tiene como finalidad la prueba de conocimientos.</p>
+          </ion-text>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="swiper-slide-container swiper-slide-container-2">
+        <div>
+          <ion-grid class="ion-padding-horizontal">
+            <ion-row>
+              <ion-col>
+                <svg fill="#fff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M30.563 9.369l-0.136-0.307-0.229 0.249c-0.541 0.62-1.233 1.095-2.004 1.381l-0.215 0.083 0.089 0.208c0.661 1.589 1.005 3.292 1 5.011 0 7.208-5.86 13.073-13.073 13.073s-13.068-5.86-13.068-13.068c0-7.208 5.871-13.073 13.073-13.073 1.959 0 3.844 0.423 5.599 1.261l0.208 0.099 0.089-0.204c0.323-0.76 0.828-1.421 1.473-1.937l0.261-0.213-0.297-0.156c-2.265-1.172-4.781-1.781-7.333-1.776-8.823 0-16 7.177-16 16 0 8.828 7.177 16 16 16 8.828 0 16-7.172 16-16 0-2.307-0.479-4.536-1.437-6.631zM16 8.708c-4.027 0.005-7.287 3.265-7.292 7.292 0.005 4.027 3.265 7.287 7.292 7.292 4.027-0.005 7.287-3.265 7.292-7.292-0.005-4.027-3.265-7.287-7.292-7.292zM29.792 6.031c0 1.839-1.489 3.324-3.323 3.324-1.839 0-3.329-1.485-3.329-3.324 0-4.432 6.652-4.432 6.652 0z"></path> </g></svg>
+              </ion-col>
+              <ion-col>
+                <svg fill="#fff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>angular</title> <path d="M24.826 23.885h-3.297l-1.777-4.377h-7.507l-1.777 4.379h-3.299l8.83-19.571zM15.999 1.004l-14.145 4.976 2.157 18.458 11.989 6.557 11.992-6.551 2.154-18.462-14.147-4.977zM13.414 16.806h5.171l-2.587-6.133z"></path> </g></svg>
+              </ion-col>
+              <ion-col>
+                <svg fill="#fff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>firebase</title> <path d="M18.874 9.935l-2.274-4.351c-0.116-0.217-0.341-0.363-0.6-0.363s-0.484 0.145-0.598 0.359l-0.002 0.004-9.985 17.894zM26.852 25.202l-2.812-17.495c-0.052-0.325-0.331-0.571-0.667-0.571-0.189 0-0.359 0.077-0.482 0.202l-0 0-17.744 17.865 9.817 5.532c0.286 0.163 0.628 0.26 0.992 0.26s0.707-0.096 1.002-0.265l-0.010 0.005zM5.865 20.589l2.955-19.008c0.051-0.328 0.331-0.577 0.67-0.577 0.258 0 0.483 0.144 0.597 0.357l0.002 0.004 3.178 5.962z"></path> </g></svg>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <ion-text color="light">
+            <h1>Tecnologías</h1>
+            <p class="ion-padding">Ionic-Angular y conexión con Firebase.</p>
+          </ion-text>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="swiper-slide-container swiper-slide-container-3">
+        <div>
+          <div style="padding: 5em;">
+            <img src="https://cdn-icons-png.flaticon.com/512/2942/2942789.png" alt="logo">
+          </div>
+          <ion-text color="light">
+            <p class="ion-padding">Registrate e Inicia Sesión para acceder al contenido.</p>
+          </ion-text>
+
+          <ion-button color="dark" routerLink="/signin">Empieza Ahora</ion-button>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+</ion-content>

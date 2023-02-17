@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-margin-vertical">
+      Recipe Posts <br>
+      <ion-text color="secondary"><small>@{{username}}</small></ion-text>
+    </ion-title>
+    <ion-buttons slot="end" (click)="cerrarSesion()">
+      <ion-icon name="exit" color="secondary" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid fixed="true">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6" sizeMd="6" sizeSm="12" sizeXs="12">
+        <app-recipes *ngFor="let recipe of data" [item]="recipe"></app-recipes>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-card class="ion-margin">
+  <div>
+    <img [src]="item.strMealThumb">
+  </div>
+  <ion-card-header>
+    <ion-card-title>{{item.strMeal}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div class="ion-text-end">
+      <ion-badge color="success">{{item.strCategory}}</ion-badge><br>
+    </div>
+
+    <ion-text>
+      <b>Instructions : </b>
+    </ion-text>
+    
+    <app-read-more [longText]="item.strInstructions"></app-read-more>
+    
+    <div class="buttons ion-margin-top">
+      <div class="btn">
+        <ion-button fill="clear" [color]="iconColor" size="small" (click)="likeOrDislike()">
+          <ion-icon [name]="iconLike" size="large"></ion-icon>
+        </ion-button>
+        <ion-note color="medium" *ngIf="item.likes != 0">{{item.likes}}</ion-note>
+      </div>
+
+      <div class="btn">
+        <ion-button fill="clear" color="medium" size="small" (click)="openModal(item)">
+          <ion-icon name="chatbox-outline" size="large"></ion-icon>
+        </ion-button>
+        <ion-note color="medium" *ngIf="numComments != 0">{{numComments}}</ion-note>
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card>
